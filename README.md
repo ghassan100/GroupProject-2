@@ -21,8 +21,7 @@ https://www.kaggle.com/xvivancos/transactions-from-a-bakery/version/1
  
 Data Flow Diagram:
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+![Alt Text](https://github.com/ghassan100/GroupProject-2/blob/master/images/data_preview.png)
  
 
 Data Visualization Examples:
