@@ -18,14 +18,18 @@ Team GitHub: https://github.com/ghassan100/GroupProject-2
 Data Source:
 “Transactions from a bakery (Market Basket Analysis)” (Kaggle)
 https://www.kaggle.com/xvivancos/transactions-from-a-bakery/version/1
- 
+
+![Alt Text](https://github.com/ghassan100/GroupProject-2/blob/master/images/data_preview.png)
+
 Data Flow Diagram:
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
- 
+![Alt Text](https://github.com/ghassan100/GroupProject-2/blob/master/images/data_flow_diagram.png)
 
 Data Visualization Examples:
+
+![Alt Text](https://github.com/ghassan100/GroupProject-2/blob/master/images/data_visualization_inspo_1.png)
+![Alt Text](https://github.com/ghassan100/GroupProject-2/blob/master/images/data_visualization_inspo_2.png)
+
  
        
  
