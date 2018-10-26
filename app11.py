@@ -1,0 +1,93 @@
+###########################################
+# imports dependencies
+###########################################
+import datetime
+import json
+import datetime as dt
+import numpy as np
+import pandas as pd
+import sqlalchemy
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
+import collections
+from flask import Flask, jsonify
+
+###########################################
+# initializes database
+###########################################
+
+engine = create_engine("sqlite:///database.sqlite")
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+
+###########################################
+# creates references to Info
+# and Station tables
+###########################################
+
+Info = Base.classes.link
+
+session = Session(engine)
+
+####################################
+# initializes Flask app
+####################################
+app = Flask(__name__)
+
+################################
+# initializes Flask Routes
+################################
+"""
+"""
+@app.route("/Items")
+def items():
+    """Return Dates and Temp from the last year."""
+    results = session.query(Info.Date, Info.id).\
+        filter(Info.Date >= "2016-10-30", Info.Date <= "2017-01-23").\
+        all()
+# creates JSONified list
+    info_list = [results]
+
+    print( jsonify(info_list))
+    return jsonify(info_list)
+from datetime import datetime
+from functools import singledispatch
+
+@singledispatch
+def to_serializable(val):
+    """Used by default."""
+    return str(val)
+    
+@to_serializable.register(datetime)
+def ts_datetime(val):
+    """Used if *val* is an instance of datetime."""
+    return val.isoformat() + "Z"
+@app.route("/groupby")
+def groupby():
+    from sqlalchemy import func
+    foo = session.query(func.count(Info.Transection),Info.Item).\
+    group_by(Info.Item).order_by(Info.Item).all()
+    foo2 = session.query(func.count(Info.Date),Info.Item).\
+    group_by(Info.Item).order_by(Info.Item).all()
+    #distinct_dates = list(session.query(func.DATE(Info.Date)).distinct())
+    data1 = session.query(func.count(Info.Item),Info.Date).\
+    group_by(Info.Date).order_by(Info.Date).all()
+#    values = [data[x][0] for x in range(len(data))]
+#    keys = [data[x][1] for x in range(len(data))]
+    #info_list = [data]
+    #print(jsonify(info_list))
+    for x in range(len(data1)):
+       chart_data = json.dumps({"Date": data1[x][1], "High": data1[x][0]},default=to_serializable)
+    dict_list = [chart_data]
+
+    print(dict_list)
+    data = {'chart_data': chart_data}
+    #print(list(char_data))
+    return render_template("index11.html", data=data)
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

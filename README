@@ -1,0 +1,2 @@
+#self.titl = title
+tr -s ','  '\n'< head3 |awk '{print "        self." $1 "=" $1}'

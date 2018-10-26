@@ -1,0 +1,102 @@
+###########################################
+# imports dependencies
+###########################################
+import datetime
+import json
+import datetime as dt
+import numpy as np
+import pandas as pd
+import sqlalchemy
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
+from flask import Flask, jsonify
+
+###########################################
+# initializes database
+###########################################
+
+engine = create_engine("sqlite:///database.sqlite")
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+
+###########################################
+# creates references to Info
+# and Station tables
+###########################################
+
+Info = Base.classes.link
+
+session = Session(engine)
+
+####################################
+# initializes Flask app
+####################################
+app = Flask(__name__)
+
+################################
+# initializes Flask Routes
+################################
+"""
+"""
+@app.route("/Items")
+def items():
+    """Return Dates and Temp from the last year."""
+    results = session.query(Info.Date, Info.id).\
+        filter(Info.Date >= "2016-10-30", Info.Date <= "2017-01-23").\
+        all()
+# creates JSONified list
+    info_list = [results]
+
+    print( jsonify(info_list))
+    return jsonify(info_list)
+
+
+@app.route("/popular")
+def popular():
+    import pandas as pd
+    from sqlalchemy import select
+    """Return a list of items names."""
+    # Use Pandas to perform the sql query
+    stmt = session.query(Info).statement
+    df = pd.read_sql_query(stmt, session.bind)
+#    df['Date'] = df['Date'].dt.strftime('%Y-%m-%d %H:%M:%S')
+#    df['Date'] = pd.to_datetime(df['Date'], format = '%Y-%d-%b')
+#   df['Date'] = pd.to_datetime(df['Date'], format = '%d%b%Y')
+    chart_data = df.to_dict('records')
+    print(chart_data)
+#   chart_data = json.dumps(chart_data, indent=2)
+    data = {'chart_data': chart_data}
+    print(chart_data)
+    return render_template("index12.html", data=chart_data)
+"""
+    from sqlalchemy import func
+    foo= session.query(Info.Item,func.count(Info.Item)).group_by(Info.Item).all()
+
+    print(list(foo))
+#    return jsonify(list(foo))
+    return render_template("index10.html", data=foo)
+import datetime
+import json
+"""
+
+@app.route("/groupby")
+def groupby():
+#    foo=session.query(Info.Item,func.count(Info.Item).groupby(Info.Item)).all()
+#    foo=session.query(func.count(Info.Item).label('count'))
+    from sqlalchemy import func
+    foo = session.query(func.count(Info.Transection),Info.Item).\
+    group_by(Info.Item).order_by(Info.Item).all()
+    foo2 = session.query(func.count(Info.Date),Info.Item).\
+    group_by(Info.Item).order_by(Info.Item).all()
+    data = session.query(func.count(Info.Item),Info.Date).\
+    group_by(Info.Date).order_by(Info.Date).all()
+    values = [data[x][0] for x in range(len(data))]
+    keys = [data[x][1] for x in range(len(data))]
+    dict_list = [ {"Date": keys}, {"Values": values}]
+    print(dict_list)
+    return jsonify(dict_list)
+
+if __name__ == '__main__':
+    app.run(debug=True)

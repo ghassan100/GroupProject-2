@@ -1,0 +1,5 @@
+copy myfm.db backup-db.sqlite3
+echo .dump tablename | sqlite3 myfm.db > modify.sql
+(now delete or change the constraint in modify.sql)
+echo drop table fmMetadata; | sqlite3 myfm.db 
+sqlite3 myfm.db < modify.sql

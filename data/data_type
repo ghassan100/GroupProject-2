@@ -1,0 +1,366 @@
+Farmer's Market ID
+Data type:
+
+string
+
+Unique identifier assigned to the farmer's market.
+Market Name
+Data type:
+
+string
+
+Name of farmer's market.
+Farmer's Market Street
+Data type:
+
+string
+
+Street name of farmer's market.
+Farmer's Market City
+Data type:
+
+string
+
+City of farmer's market.
+Farmer's Market County
+Data type:
+
+string
+
+County of farmer's market.
+Farmer's Market State
+Data type:
+
+string
+
+State of farmer's market.
+Farmer's Market Zip
+Data type:
+
+string
+
+Zip code of farmer's market. 
+Website
+Data type:
+
+string
+
+Website of farmer's market. 
+Facebook
+Data type:
+
+string
+
+Facebook site of farmer's market. 
+Twitter
+Data type:
+
+string
+
+Twitter site or Twitter handle of farmer's market.
+Youtube
+Data type:
+
+string
+
+Youtube site or Youtube channel name of farmer's market. 
+Other media
+Data type:
+
+string
+
+Other social media links or handle associated with the farmer's market.
+Season 1 Date
+Data type:
+
+string
+
+Date range of operations 1 for farmer's market.
+Season 1 Time
+Data type:
+
+string
+
+Hours of operation 1 for farmer's market.
+Season 2 Date
+Data type:
+
+string
+
+Date range of operations 2 for farmer's market.
+Season 2 Time
+Data type:
+
+string
+
+Hours of operation 2 for farmer's market.
+Season 3 Date
+Data type:
+
+string
+
+Date range of operations 3 for farmer's market.
+Season 3 Time
+Data type:
+
+string
+
+Hours of operation 3 for farmer's market.
+Season 4 Date
+Data type:
+
+string
+
+Date range of operations 4 for farmer's market.
+Season 4 Time
+Data type:
+
+string
+
+Hours of operation 4 for farmer's market.
+X Coordinate
+Data type:
+
+decimal
+
+X coordinate of farmer's market.
+Y Coordinate
+Data type:
+
+decimal
+
+Y coordinate of farmer's market.
+Location Type
+Data type:
+
+string
+
+Type of farmer's market location.
+Has Organic?
+Data type:
+
+boolean
+
+Does the farmer's market sell organic goods? True or false response.
+Has Baked Goods?
+Data type:
+
+boolean
+
+Does the farmer's market sell baked goods? True or false response.
+Has Cheese?
+Data type:
+
+boolean
+
+Does the farmer's market sell cheese? True or false response.
+Has Crafts?
+Data type:
+
+boolean
+
+Does the farmer's market sell crafts? True or false response.
+Has Flowers?
+Data type:
+
+boolean
+
+Does the farmer's market sell flowers? True or false response.
+Has Eggs?
+Data type:
+
+boolean
+
+Does the farmer's market sell eggs? True or false response.
+Has Seafood?
+Data type:
+
+boolean
+
+Does the farmer's market sell seafood? True or false response.
+Has Herbs?
+Data type:
+
+boolean
+
+Does the farmer's market sell herbs? True or false response.
+Has Vegetables?
+Data type:
+
+boolean
+
+Does the farmer's market sell vegetables? True or false response.
+Has Honey?
+Data type:
+
+boolean
+
+Does the farmer's market sell honey? True or false response.
+Has Jams?
+Data type:
+
+boolean
+
+Does the farmer's market sell jams? True or false response.
+Has Maple?
+Data type:
+
+boolean
+
+Does the farmer's market sell maple? True or false response.
+Has Meat?
+Data type:
+
+boolean
+
+Does the farmer's market sell meat? True or false response.
+Has Nursery?
+Data type:
+
+boolean
+
+Does the farmer's market have a nursery? True or false response.
+Has Nuts?
+Data type:
+
+boolean
+
+Does the farmer's market sell nuts? True or false response.
+Has Plants?
+Data type:
+
+boolean
+
+Does the farmer's market have plants? True or false response.
+Has Poultry?
+Data type:
+
+boolean
+
+Does the farmer's market sell poultry? True or false response. 
+Has Prepared?
+Data type:
+
+boolean
+
+Does the farmer's market sell prepared goods? True or false response.
+Has Soap?
+Data type:
+
+boolean
+
+Does the farmer's market sell soap? True or false response.
+Has Trees?
+Data type:
+
+boolean
+
+Does the farmer's market sell trees? True or false response.
+Has Wine?
+Data type:
+
+boolean
+
+Does the farmer's market sell wine? True or false response. 
+Has Coffee?
+Data type:
+
+boolean
+
+Does the farmer's market sell coffee? True or false response.
+Has Beans?
+Data type:
+
+boolean
+
+Does the farmers market sell beans? True or false response.
+Has Fruits?
+Data type:
+
+boolean
+
+Does the farmers market sell fruit? True or false response. 
+Has Grains?
+Data type:
+
+boolean
+
+Does the farmers market sell grains? True or false response.
+Has Juices?
+Data type:
+
+boolean
+
+Does the farmers market sell juices? True or false response.
+Has Mushrooms?
+Data type:
+
+boolean
+
+Does the farmers market sell mushrooms? True or false response.
+Has Pet Food?
+Data type:
+
+boolean
+
+Does the farmers market sell pet food? True or false response.
+Has Tofu?
+Data type:
+
+boolean
+
+Does the farmers market sell tofu? True or false response. 
+Has Wild Harvested?
+Data type:
+
+boolean
+
+Does the farmers market sell wild harvested forest products: mushrooms, medicinal herbs, edible fruits and nuts, etc? True or false response
+Accepts Credit?
+Data type:
+
+boolean
+
+Does the farmer's market accept credit card payments
+Accepts WIC?
+Data type:
+
+boolean
+
+Does the farmer's market accept WIC Farmer's Market Nutrition Program (WIC-FMNP)
+Accepts WIC Cash?
+Data type:
+
+boolean
+
+Does the farmer's market accept WIC Cash Value Vouchers?
+Accepts SFMNP?
+Data type:
+
+boolean
+
+Does the farmer's market accept Senior Farmer's Market Nutrition Program (SDMNP) coupons? True or false response.
+Accepts SNAP?
+Data type:
+
+boolean
+
+Does the farmer's market accept food stamps (Supplemental Nutrition Assistance Program)? True or false response.
+Update
+Data type:
+
+datetime
+
+Date and time of farmer's market last update.
+Update Unparsed
+Data type:
+
+string
+
+Date and time of farmer's market last update, in raw data format. 
+Enigma Serial ID
+Data type:
+
+string
+
+An Enigma assigned se
