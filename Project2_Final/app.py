@@ -109,6 +109,13 @@ def mostpopular():
 
     return jsonify(item_list)
 
+@app.route("/topten")
+def topten():
+    return render_template("mostpopular.html")
+
+@app.route("/sales_over_time")
+def sales_time_series():
+    return render_template("timeseries.html")   
 
 @singledispatch
 def to_serializable(val):

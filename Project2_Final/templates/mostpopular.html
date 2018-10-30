@@ -114,130 +114,45 @@ body.custom-background { background-color: #f0f0f0; }
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
-			<div class="menu-primary-menu-container"><ul id="menu-primary-menu" class="menu"><li id="menu-item-5588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5565 current_page_item menu-item-5588"><a href="index.html">Home</a></li>
+			<div class="menu-primary-menu-container"><ul id="menu-primary-menu" class="menu"><li id="menu-item-5588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5565 current_page_item menu-item-5588"><a href="http://localhost:5000/">Home</a></li>
 <li id="menu-item-5589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5589"><a href="https://github.com/ghassan100/GroupProject-2">About</a></li>
-<form action = "http://localhost:5000/login" method="post"></form>
+<form action = "http://localhost:5000/" method="post"></form>
 <select name="search-option">
   <option value="nm">Popular Items</option>
 </select>
 <input type="submit" value="Submit" name="nm">
 <!-- <select id="menu-item-5590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5590"><a href="t1.html">All Posts</a></li> -->
 </form>
-<li id="menu-item-5591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5591"><a href="t1.html">Popular Items</a></li>
+<li id="menu-item-5591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5591"><a href="http://localhost:5000/topten">Popular Items</a></li>
 </ul></div>		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
 
-	<div id="primary" class="content-area front-page-content-area">
-					<div class="hero">
-
-								<figure class="hero-content">
-					<img width="1180" height="610" src="{{url_for('static', filename='images/mostpopimage.png')}}?w=1180&amp;h=610&amp;crop=1" class="attachment-sela-hero-thumbnail size-sela-hero-thumbnail wp-post-image" alt="" srcset="{{url_for('static', filename='images/mainimage.png')}}?w=1180&amp;h=610&amp;crop=1 1180w, {{url_for('static', filename='images/images.jpg')}}?w=150&amp;h=78&amp;crop=1 150w, {{url_for('static', filename='images/mainimage.png')}}?w=300&amp;h=155&amp;crop=1 300w, {{url_for('static', filename='images/images.jpg')}}?w=768&amp;h=397&amp;crop=1 768w, {{url_for('static', filename='images/images.jpg')}}?w=500&amp;h=258&amp;crop=1 500w" sizes="(max-width: 1180px) 100vw, 1180px" data-attachment-id="7319" data-permalink="https://algobeans.com/home/welcome-page-image/#main" data-orig-file="{{url_for('static', filename='images/images.jpg')}}" data-orig-size="1660,910" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="welcome page image" data-image-description="" data-medium-file="https://annalyzin.files.wordpress.com/2016/08/welcome-page-image1.png?w=300" data-large-file="{{url_for('static', filename='images/images.jpg')}}?w=500" />					<div class="hero-content-overlayer">
-						<div class="hero-container-outer">
-							<div class="hero-container-inner">
-								<article id="post-5565" class="post-5565 page type-page status-publish has-post-thumbnail hentry with-featured-image">
-									<header class="entry-header">
-																			</header><!-- .entry-header -->
-
-									<div class="entry-content">
-<p><strong>Looking to purchase with intelligence? You are in the right place.</strong><br />
-<strong>Our promise: a guilt-free purchase.</strong></p>
-<p>From traditional favorites like cake to pastries made to you by the world-renowned Trilogy Chef. We offer them all using only the most intuitive ingredients (flask, bootstrap, css, vega, Dash, and d3 all flavored with python ). Tough ingredients (concepts) are minced and boiled down before being served to you. Club hours, choose from late afternoons or Saturday morning. Suitable for any one with hungry mind or stomach. At less than 4 hours of intense classes, seems like a snack that packs a punch.</p>
-<p>Sign up for Trilogy's bootcamp to get byte-sized javascript delivered to you in a box of chocolates.</p>
-
-<!-- <p><img data-attachment-id="6434" data-permalink="{{url_for('static', filename='images/mainimage.png')}}" data-orig-file="{{url_for('static', filename='images/images.jpg')}}?w=340&#038;h=55" data-orig-size="544,88" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="sign up button (transparent bg and cropped)" data-image-description="" data-medium-file="{{url_for('static', filename='images/images.jpg')}}?w=340&#038;h=55?w=300" data-large-file="{{url_for('static', filename='images/images.jpg')}}?w=340&#038;h=55?w=500" class="alignnone  wp-image-6434" src="{{url_for('static', filename='images/mainimage.png')}}?w=340&#038;h=55" alt="Tutorials" width="340" height="55" srcset="/Users/ghassan/Desktop/images.jpg?w=340&amp;h=55 340w, /Users/ghassan/Desktop/images.jpg?w=150&amp;h=24 150w, /Users/ghassan/Desktop/images.jpg?w=300&amp;h=49 300w, /Users/ghassan/Desktop/images.jpg?w=500&amp;h=81 500w, /Users/ghassan/Desktop/images.jpg" sizes="(max-width: 340px) 100vw, 340px"></p> -->
-
-<p>&nbsp;</p>
-									</div><!-- .entry-content -->
-																	</article><!-- #post-## -->
-							</div><!-- .hero-container-inner -->
-						</div><!-- .hero-container-outer -->
-					</div><!-- .hero-content-overlayer -->
-				</figure><!-- .hero-content -->
-
-				
-			</div><!-- .hero -->
-			</div><!-- #primary -->
 
 	
 <div id="secondary" class="widget-area front-widget-area" role="complementary">
 		<div id="widget-area-5" class="widget-area">
 		<aside id="text-14" class="widget widget_text">	
 <!-- <div class="textwidget"><a href="t1.html"><h3 class="widget-title"> -->	
-<div class="textwidget"><a href="t1.html"><h2 class="widget-title"> Welcome to Our Bakery </h2>
+
 
 <!-- <br>
 <img src="{{url_for('static', filename='images/mainimage.png')}}"/></a>
 <br> -->
-<br>
 
-<br>
 
-<h1 class="widget-title">Need help selecting an item?</h1>
-  <center><img src="{{url_for('static', filename='images/mostpopimage.png')}}" style="width:500px;height:600px;" ></center>
+	<h1>Top 10 Most Popular Items</h1>
+	<h4>Based on Sales Past 6 Months</h4>
+	<div class="row">
+			<div class="col-md-12">
+				<div id="bar"></div>
+			</div>
+	</div>
 
-<br>
-<br>
-<br>
-<br>
 
-<h1>Top 10 Most Popular Items</h1>
-<h4>Based on Sales Past 6 Months</h4>
-<div class="row">
-		<div class="col-md-12">
-			<div id="bar"></div>
-		</div>
 </div>
 
-<br>
-<br>
-
-<div>
-		<a href="time_series.html"> <img src="{{url_for('static', filename='images/itemsbyseries.png')}}"></a>
-</div>
-
-<br>
-<br>
-
-<div>
-		<div class="well">
-				<h4>Select Item:</h4>
-				<select id="selDataset" onchange="optionChanged(this.value)"></select>
-		</div>
-</div>
-
-<br>
-
-<h1>Daily Sales Since Opening</h1>
-<div class="row">
-		<div class="col-md-12">
-		  <div id="line"></div>
-		</div>
-</div>
-
-<br>
-<br>
-<h3 class="widget-title">You may also like</h3>
-<img src="{{url_for('static', filename='images/ml.png')}}?w=458&amp;h=272"><br>
-<h4>Learn what else is most commonly purchased with your item(s).</h4>
-<br>
-<br>
-		</aside>	</div><!-- #widget-area-7 -->
-	</div><!-- #secondary -->
-
-	
-	
-
-<div id="tertiary" class="widget-area footer-widget-area" role="complementary">
-		<div id="widget-area-2" class="widget-area">
-	
-		<div id="widget-area-4" class="widget-area">
-</div>
-<p>Copyright © 2018 Group 2 Team<br />
-All rights reserved. Be a cool bean.<br />
-Credits to  BootCamp cohort</p>
-</div>
 		</aside>	</div><!-- #widget-area-4 -->
 	</div><!-- #tertiary -->
 
